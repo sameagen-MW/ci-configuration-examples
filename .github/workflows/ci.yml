@@ -2,9 +2,6 @@
 
 name: MATLAB Build
 
-env:
-  MATHWORKS_LICENSING_ENDPOINT=stage
-
 # Controls when the action will run. 
 on:
   # Triggers the workflow on push or pull request events but only for the main branch
@@ -36,6 +33,8 @@ jobs:
         uses: matlab-actions/run-tests@v2
         with:
           source-folder: code
+    env:
+      MATHWORKS_LICENSING_ENDPOINT: stage
 
       # You can use "run-build" to invoke the MATLAB build tool and run build tasks
       #- name: Run the default "test" task in the build file
