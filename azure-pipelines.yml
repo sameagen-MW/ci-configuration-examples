@@ -1,5 +1,5 @@
 pool:
-  vmImage: ubuntu-latest
+  vmImage: windows-latest
 steps:
   - task: InstallMATLAB@1
   - task: RunMATLABTests@1
