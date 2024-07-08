@@ -14,3 +14,7 @@ plan.DefaultTasks = "test";
 
 end
 
+function failTask(~)
+error("bam");
+end
+
