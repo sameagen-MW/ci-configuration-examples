@@ -13,7 +13,6 @@ jobs:
     machine: true
     resource_class: sameagen-mw/windows
     steps:
-      - checkout
     #  - run: # Linux agent
     #      name: Add MATLAB to path
     #      command: |
