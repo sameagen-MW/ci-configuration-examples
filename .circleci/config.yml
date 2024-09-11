@@ -28,7 +28,7 @@ jobs:
           shell: powershell.exe -ExecutionPolicy Bypass
           command: |
             $matlab_path = "C:\Program Files\MATLAB\R2023b\bin"
-            if ((Get-Command "matlab.exe" -ErrorAction SilentlyContinue).Path -neq $matlab_path)
+            if ((Get-Command "matlab.exe" -ErrorAction SilentlyContinue).Path -ne $matlab_path)
             {
                 Add-Content -Path $PROFILE -Value "$env:Path = '$matlab_path;' + $env:Path"
             }
