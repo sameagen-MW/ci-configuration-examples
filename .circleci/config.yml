@@ -25,7 +25,7 @@ jobs:
     #       source "$BASH_ENV"
       - run: # windows agent
           name: Add MATLAB to path
-          shell: bash
+          shell: powershell.exe
           command: |
             echo "hello world"
             # echo $BASH_ENV
