@@ -13,24 +13,24 @@ jobs:
     machine: true
     resource_class: sameagen-mw/windows
     steps:
-    #  - run: # Linux agent
-    #      name: Add MATLAB to path
-    #      command: |
-    #        echo 'export PATH=/path/to/MATLAB/bin:"$PATH"' >> "$BASH_ENV"
-    #        source "$BASH_ENV"
+      - run: # Linux agent
+           name: Add MATLAB to path
+           command: |
+             echo 'export PATH=/path/to/MATLAB/bin:"$PATH"' >> "$BASH_ENV"
+             source "$BASH_ENV"
     # - run: # mac agent
     #     name: Add MATLAB to path
     #     command: |
     #       echo 'export PATH=/path/to/MATLAB.app/bin:"$PATH"' >> "$BASH_ENV"
     #       source "$BASH_ENV"
-      - run: # windows agent
-          name: Add MATLAB to path
-          shell: powershell.exe
-          command: |
-            echo "hello world"
-            # echo $BASH_ENV
+    #  - run: # windows agent
+    #      name: Add MATLAB to path
+    #      shell: powershell.exe
+    #      command: |
+    #        echo "hello world"
+    #        # echo $BASH_ENV
             # echo 'export PATH="C:\Program Files\MATLAB\R2023b\bin":"$PATH"' >> "$BASH_ENV"
             # source "$BASH_ENV"
-            echo "goodbye"
+    #        echo "goodbye"
       - matlab/run-command:
           command: ver
