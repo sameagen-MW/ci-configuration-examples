@@ -25,13 +25,9 @@ jobs:
     #       source "$BASH_ENV"
       - run: # windows agent
           name: Add MATLAB to path
-          shell: powershell.exe -ExecutionPolicy Bypass
+          shell: bash
           command: |
-            $matlab_path = "C:\Program Files\MATLAB\R2023b\bin"
-            if ((Get-Command "matlab.exe" -ErrorAction SilentlyContinue).Path -ne $matlab_path)
-            {
-                Add-Content -Path $PROFILE -Value "$env:Path = '$matlab_path;' + $env:Path"
-            }
-            . $PROFILE
+            echo 'export PATH="C:\Program Files\MATLAB\R2023b\bin":"$PATH"' >> "$BASH_ENV"
+            source "$BASH_ENV"
       - matlab/run-command:
           command: ver
