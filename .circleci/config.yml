@@ -11,7 +11,7 @@ workflows:
 jobs:
   build:
     machine: true
-    resource_class: sameagen-mw/linux
+    resource_class: sameagen-mw/windows
     steps:
     #  - run: # Linux agent
     #       name: Add MATLAB to path
