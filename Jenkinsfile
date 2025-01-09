@@ -4,6 +4,10 @@ pipeline {
   }
   
   agent any
+
+  tools {
+    matlab 'R2024a'
+  }
   
   stages {
     stage('Run MATLAB Tests') {
