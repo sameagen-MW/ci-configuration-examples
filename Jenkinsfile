@@ -1,10 +1,9 @@
 pipeline {
   environment {
-    MLM_LICENSE_TOKEN = credentials('mytoken')
+    MLM_LICENSE_TOKEN = credentials('matlab-token')
   }
-  agent {
-    docker { image 'matlab-image' }
-  }
+  
+  agent any
   
   stages {
     stage('Run MATLAB Tests') {
