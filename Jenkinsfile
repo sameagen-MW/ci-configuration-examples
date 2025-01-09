@@ -1,6 +1,6 @@
 pipeline {
   environment {
-    MLM_LICENSE_TOKEN = credentials('matlab-token')
+    MLM_LICENSE_TOKEN = credentials('mytoken')
   }
   
   agent any
