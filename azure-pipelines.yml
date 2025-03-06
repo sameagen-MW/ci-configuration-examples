@@ -4,4 +4,4 @@ steps:
   - task: InstallMATLAB@1
   - task: RunMATLABTests@1
     env:
-      MLM_LICENSE_TOKEN: $(matlabToken)
+      MLM_LICENSE_TOKEN: $(MLM_LICENSE_TOKEN)
