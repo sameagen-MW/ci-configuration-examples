@@ -12,7 +12,7 @@ pipeline {
   stages {
     stage('Run MATLAB Tests') {
       steps {
-        runMATLABCommand 'addpath(pwd()), savepath'
+        runMATLABCommand 'pwd(), addpath(pwd()), savepath'
         runMATLABBuild(tasks: "fail")
         runMATLABTests()
 
