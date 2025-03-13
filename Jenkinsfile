@@ -13,13 +13,9 @@ pipeline {
   stages {
     stage('Run MATLAB Tests') {
       steps {
-        runMATLABCommand 'pwd(), addpath(pwd()), savepath'
-        runMATLABCommand 'getDefaultOtelPlugins()'
+        runMATLABCommand 'matlab.addons.toolbox.installToolbox("/toolbox/otel-matlab.mltbx")'
+        runMATLABCommand 'addpath(pwd()); savepath'
         runMATLABBuild(tasks: "fail")
-        runMATLABTests()
-
-        // As an alternative to runMATLABTests, you can use runMATLABCommand to execute a MATLAB script, function, or statement.
-        // runMATLABCommand "addpath('code'); results = runtests('IncludeSubfolders', true); assertSuccess(results);"
       }
     }
   }
