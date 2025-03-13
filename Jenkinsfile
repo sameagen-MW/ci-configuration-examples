@@ -1,6 +1,6 @@
 pipeline {
   environment {
-    MLM_LICENSE_TOKEN_UNBIND = credentials('mytoken')
+    MLM_LICENSE_TOKEN = credentials('mytoken')
   }
   
   agent any
