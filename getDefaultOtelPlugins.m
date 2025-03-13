@@ -1,12 +1,12 @@
 function plugins = getDefaultOtelPlugins(options)
 
-import matlab.buildtool.internal.services.plugins.OpenTelemetryPlugin;
-
-disp("Here");
-
 arguments
     options (1,1) struct = struct
 end
+
+import matlab.buildtool.internal.services.plugins.OpenTelemetryPlugin;
+
+disp("Here");
 
 plugins = [ ...
     OpenTelemetryPlugin(), ...
