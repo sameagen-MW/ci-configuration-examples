@@ -12,6 +12,7 @@ pipeline {
   stages {
     stage('Run MATLAB Tests') {
       steps {
+        runMATLABCommand 'rehash toolboxcache'
         runMATLABBuild(tasks: "test fail", buildOptions: "-parallel")
       }
     }
