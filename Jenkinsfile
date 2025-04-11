@@ -12,7 +12,7 @@ pipeline {
   stages {
     stage('Run MATLAB Tests') {
       steps {
-        runMATLABBuild(tasks: "test fail", startupOptions: "-parallel")
+        runMATLABBuild(tasks: "test fail", buildOptions: "-parallel")
       }
     }
   }
