@@ -6,7 +6,7 @@ pipeline {
   agent any
 
   tools {
-    matlab 'R2024a'
+    matlab 'R2025b'
   }
   
   stages {
