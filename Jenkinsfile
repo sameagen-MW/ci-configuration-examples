@@ -1,7 +1,6 @@
 pipeline {
   environment {
     MLM_LICENSE_TOKEN = credentials('mytoken')
-    MW_MATLAB_BUILDTOOL_DEFAULT_PLUGINS_FCN_OVERRIDE = "getDefaultOtelPlugins"
   }
   
   agent any
