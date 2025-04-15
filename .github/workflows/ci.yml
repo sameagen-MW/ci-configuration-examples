@@ -30,6 +30,8 @@ jobs:
 
       - name: Run the default "test" task in the build file
         uses: matlab-actions/run-build@v2
+        with:
+          build-options: -parallel
         
     # env:
     #  MATHWORKS_LICENSING_ENDPOINT: stage
