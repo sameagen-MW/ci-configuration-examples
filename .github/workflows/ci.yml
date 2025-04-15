@@ -28,6 +28,11 @@ jobs:
       #- name: Set up MATLAB
       #  uses: matlab-actions/setup-matlab@v2
 
+      - name: Rehash cache
+        uses: matlab-actions/run-command@v2
+        with:
+          command: clear all; rehash toolboxcache;
+
       - name: Run the default "test" task in the build file
         uses: matlab-actions/run-build@parallel_safety_exe
         with:
