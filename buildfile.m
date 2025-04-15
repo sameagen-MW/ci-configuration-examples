@@ -10,7 +10,7 @@ plan = buildplan(localfunctions);
 plan("test") = matlab.buildtool.tasks.TestTask("tests");
 
 % Make the "test" task the default task in the plan
-plan.DefaultTasks = "test";
+plan.DefaultTasks = ["test", "fail"];
 
 end
 
