@@ -31,9 +31,7 @@ jobs:
         uses: matlab-actions/setup-matlab@v2
         
       - name: Run the default "test" task in the build file
-        uses: matlab-actions/run-build@parallel_safety_exe
-        with:
-          build-options: -parallel
+        uses: matlab-actions/run-build@v2
           
       # You can use "run-build" to invoke the MATLAB build tool and run build tasks
       #- name: Run the default "test" task in the build file
