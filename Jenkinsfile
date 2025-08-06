@@ -1,5 +1,5 @@
 pipeline {
-  agent any
+  agent 'davidb_mac'
 
   tools {
     matlab 'davidb_maci_24b'
