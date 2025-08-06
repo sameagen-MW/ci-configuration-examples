@@ -1,8 +1,8 @@
 pipeline {
-  agent { node { label 'davidb_mac' } }
+  agent { node { label 'leased_debian12' } }
 
   tools {
-    matlab 'davidb_maci_24b'
+    matlab 'MPM_install'
   }
   
   stages {
