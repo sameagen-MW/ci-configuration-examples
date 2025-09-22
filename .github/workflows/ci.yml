@@ -33,7 +33,7 @@ jobs:
           release: R2025b
         
       - name: Run the default "test" task in the build file
-        uses: matlab-actions/run-build@parallel-build-summary-fix
+        uses: matlab-actions/run-build@v2
           
       # You can use "run-build" to invoke the MATLAB build tool and run build tasks
       #- name: Run the default "test" task in the build file
